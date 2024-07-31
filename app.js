@@ -84,14 +84,20 @@ function gestoreLoad(){
 	function crea(){
 		
 		rimuoviFigli(nodo);
-	   
+		
+		let tot = 0;
+	  
 		for (let i = 0; i < lista.length; i++){
 			
 			let nodoP = document.createElement("p");
 			nodoP.textContent = lista[i].visualizza();
 			nodo.appendChild(nodoP);
+			tot += lista[i].prezzo;
 			
 		}
+		let nodoT = document.createElement("p");
+				nodoT.textContent = "Totale : " +  tot;
+				nodo.appendChild(nodoT);
 	}
 	
 	function rimuoviFigli (nodo) {
