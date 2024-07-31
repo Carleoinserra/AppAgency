@@ -92,7 +92,8 @@ ArrayList<prodotto>	lista = prodJDBCTemp.getLista();
 	    	System.out.println(p1);
 	    }
 	    
-	    
+	    listaI.clear();
+	    listaO.clear();
 	    model.addAttribute("lista", lista);
 	    	
 	    	
